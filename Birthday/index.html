@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="ie lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>    <html class="ie lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>    <html class="ie lt-ie9"> <![endif]-->
+<!--[if gt IE 8]> <html> <![endif]-->
+<!--[if !IE]><!--><html lang="zh-CN"><!-- <![endif]-->
+<head>
+	<title>生日快乐！✨</title>
+	<meta charset="UTF-8" />
+	<meta name="description" content="Happy Birthday">
+	<meta name="robots" content="index, follow" />
+    <meta name="keywords" content="Birthday, Happy">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=7; IE=EDGE" />
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="stylesheet.css">
+	<link rel="stylesheet" type="text/css" href="loading.css">
+	<link href='http://fonts.googleapis.com/css?family=Signika' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet/less" href="cake.less">
+	<script src="//cdnjs.cloudflare.com/ajax/libs/less.js/2.1.0/less.min.js"></script>
+</head>
+
+<body>
+	<div class="loading"></div>
+	<audio class="song" id="bgm" controls loop>
+        <source src="hbd.mp3"></source>
+	   你的浏览器不支持播放这段背景音乐。
+    </audio>
+    
+    <!-- 顶部的气球字母：原版是 H-B-D-X-O-L-A，这里改成了「生日快乐」外加三个浪漫心形，刚好7个气球 -->
+    <div class="balloons text-center" id="b1">
+    	<h2 style="color:#F2B300;">生</h2>
+    </div>
+    <div class="balloons text-center" id="b2">
+    	<h2 style="color:#0719D4;">日</h2>
+    </div>
+	<div class="balloons text-center" id="b3">
+    	<h2 style="color:#D14D39;">快</h2>
+    </div>
+	<div class="balloons text-center" id="b4">
+    	<h2 style="color:#8FAD00;">乐</h2>
+    </div>
+	<div class="balloons text-center" id="b5">
+    	<h2 style="color:#8377E4;">❤</h2>
+    </div>
+    <div class="balloons text-center" id="b6">
+    	<h2 style="color:#99C96A;">❤</h2>
+    </div>
+    <div class="balloons text-center" id="b7">
+    	<h2 style="color:#20CFB4;">❤</h2>
+    </div>
+
+    <img src="Balloon-Border.png" width="100%" class="balloon-border">
+ 
+	<div class="container">
+		
+		<div class="row">
+			<div class="col-md-2 col-xs-2 bulb-holder">
+				<div class="bulb" id="bulb_yellow"></div>
+			</div>
+			<div class="col-md-2 col-xs-2 bulb-holder">
+				<div class="bulb" id="bulb_red"></div>
+			</div>
+			<div class="col-md-2 col-xs-2 bulb-holder">
+				<div class="bulb" id="bulb_blue"></div>
+			</div>
+			<div class="col-md-2 col-xs-2 bulb-holder">
+				<div class="bulb" id="bulb_green"></div>
+			</div>
+			<div class="col-md-2 col-xs-2 bulb-holder">
+				<div class="bulb" id="bulb_pink"></div>
+			</div>
+			<div class="col-md-2 col-xs-2 bulb-holder">
+				<div class="bulb" id="bulb_orange"></div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-12 text-center">
+				<img src="banner.png" class="bannar">
+			</div>
+		</div>
+        
+<!-- === 完美的扁平蛋糕 + 抠图宠物联动结构 === -->
+		<div class="row cake-cover">
+			<div class="col-md-12 text-center" style="position: relative;">
+                
+                <!-- 1. 恢复原汁原味的代码绘制经典扁平蛋糕 -->
+				<div class="cake">
+				  <div class="velas">
+				    <div class="fuego"></div>
+				    <div class="fuego"></div>
+				    <div class="fuego"></div>
+				    <div class="fuego"></div>
+				    <div class="fuego"></div>
+				  </div>
+				  <div class="cobertura"></div>
+				  <div class="bizcocho"></div>
+				</div>
+
+                <!-- 2. 精巧守候在扁平蛋糕两侧的猫咪和狗狗 -->
+                <img src="cat.png" id="surprise_cat" class="surprise-pet" alt="猫咪" style="display: none; position: absolute;">
+                <img src="dog.png" id="surprise_dog" class="surprise-pet" alt="狗狗" style="display: none; position: absolute;">
+                
+			</div>
+		</div>
+        
+		<!-- 核心情话部分：已插入猫咪和狗狗的专属暖心段落 -->
+		<div class="row message">
+			<div class="col-md-12">
+				<p>今天...</p>
+				<p>看似是极其平凡的一天</p>
+				<p>但仔细想想</p>
+				<p>又是很特别的一天</p>
+				<p>因为在这一天</p>
+				<p><strong>你来到了这个世界</strong></p>
+				<p>敲代码coding的时候我总在想……</p>
+				<p>世界上最完美的程序是什么样的？</p>
+				<p>现在，我好像找到了答案。</p>
+                <!-- 联动加入宠物内容 -->
+				<p>不仅是我</p>
+				<p>你看，连最傲娇的嘉年华</p>
+				<p>和最贪玩的元宝</p>
+				<p>今天都乖乖地围坐在蛋糕前</p>
+				<p>期待陪着你一起许下愿望</p>
+				<p>有些话平常用微信说总觉得有些shy</p>
+				<p>所以今天</p>
+				<p>我把它写进了代码里</p>
+				<p>把这份独特的浪漫传递给你</p>
+				<p>谢谢你的出现</p>
+				<p>让我的生活多出了一抹新鲜的色彩</p>
+				<p>是仙逆也是金铲铲的陪伴~</p>
+				<p>希望在未来的日子里</p>
+				<p>你的世界永远 Bug 全无，快乐满仓</p>
+				<p>愿你每天都能自由自在</p>
+				<p>像飞鸟一样去追逐自己热爱的一切</p>
+				<p>别担心，遇到什么困难</p>
+				<p>我们都会在你身边支持你</p>
+				<p>新的一岁，一定会比过去更精彩</p>
+				<p>也希望接下来的路</p>
+				<p>能陪你一起发现更多的小美好</p>
+				<p>保持一往无前的元气吧！</p>
+				<p>今天，请一定要尽情地笑</p>
+				<p>把它变成最棒的独家记忆</p>
+				<p>最后……</p>
+				<p>让我再郑重地对你说一声：</p>
+				<p>🎉 祝最可爱的巧克力大王，生日快乐！ 🎂</p> 
+
+				<!-- === 🎁 新增：抽奖盲盒彩蛋互动区域 🎁 === -->
+				<div class="gift-box-section" id="gift_section" style="display: none; text-align: center; margin-top: 40px;">
+					<h3 style="color: #C4515C; font-weight: bold; margin-bottom: 30px; font-family: 'Signika'; text-shadow: 2px 2px 2px #FFF;">
+						🎁 触发隐藏成就！请为自己抽取生日专属盲盒（我全都要！） 🎁
+					</h3>
+					<div class="gift-container" style="display: flex; justify-content: center; gap: 40px; flex-wrap: wrap;">
+						<!-- 礼盒 1 -->
+						<div class="gift-box" onclick="openGift(1)">
+							<div class="gift-icon">🎁</div>
+							<div class="gift-label">盲盒 A</div>
+						</div>
+						<!-- 礼盒 2 -->
+						<div class="gift-box" onclick="openGift(2)">
+							<div class="gift-icon">🎁</div>
+							<div class="gift-label">盲盒 B</div>
+						</div>
+						<!-- 礼盒 3 -->
+						<div class="gift-box" onclick="openGift(3)">
+							<div class="gift-icon">🎁</div>
+							<div class="gift-label">盲盒 C</div>
+						</div>
+					</div>
+					<!-- 交互中奖结果弹窗遮罩层 -->
+					<div class="gift-result-overlay" id="gift_overlay" onclick="closeOverlay()">
+						<div class="gift-result-content" onclick="event.stopPropagation()">
+							<h2 id="result_title">🎉 恭喜中奖！ 🎉</h2>
+							<p id="result_text" style="display:block !important; color:#333 !important; text-shadow:none !important; font-size:22px; font-weight: bold; margin: 20px 0; line-height: 1.6;"></p>
+							<button class="btn btn-primary" onclick="closeOverlay()">收下礼物 ❤</button>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+        
+		<!-- 底部控制按钮 -->
+		<div class="navbar navbar-fixed-bottom">
+			<div class="row">
+				<div class="col-md-6 text-center col-md-offset-3">
+					<button class="btn btn-primary" id="turn_on">开灯</button>
+					<button class="btn btn-primary" id="play">播放BGM</button>
+					<button class="btn btn-primary" id="bannar_coming">布置生日现场</button>
+					<button class="btn btn-primary" id="balloons_flying">上气球~</button>
+					<button class="btn btn-primary" id="cake_fadein">送上巧克力蛋糕</button>
+					<button class="btn btn-primary" id="light_candle">点蜡烛</button>
+					<button class="btn btn-primary" id="wish_message">许下一个愿望</button>
+					<button class="btn btn-primary" id="story">🎉 祝wuli巧克力大王，生日快乐！ 🎂</button>
+				</div>
+			</div>
+		</div>
+
+	</div>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+<script src="effect.js"></script>
+</html>
