@@ -4,16 +4,12 @@ $(window).load(function(){
 });
 $('document').ready(function(){
 		var vw;
+		function isMobile() {
+			return $(window).width() <= 850;
+		}
+
 		$(window).resize(function(){
-			 vw = $(window).width()/2;
-			$('#b1,#b2,#b3,#b4,#b5,#b6,#b7').stop();
-			$('#b11').animate({top:240, left: vw-350},500);
-			$('#b22').animate({top:240, left: vw-250},500);
-			$('#b33').animate({top:240, left: vw-150},500);
-			$('#b44').animate({top:240, left: vw-50},500);
-			$('#b55').animate({top:240, left: vw+50},500);
-			$('#b66').animate({top:240, left: vw+150},500);
-			$('#b77').animate({top:240, left: vw+250},500);
+			vw = $(window).width()/2;
 		});
 
 	$('#turn_on').click(function(){
@@ -37,7 +33,7 @@ $('document').ready(function(){
 		$('#bulb_green').addClass('bulb-glow-green-after');
 		$('#bulb_pink').addClass('bulb-glow-pink-after');
 		$('#bulb_orange').addClass('bulb-glow-orange-after');
-		$('body').css('background-color','#FFF'); // 顺手修复原版代码的拼写错误[cite: 8]
+		$('body').css('background-color','#FFF'); 
 		$('body').addClass('peach-after');
 		$(this).fadeOut('slow').delay(6000).promise().done(function(){
 			$('#bannar_coming').fadeIn('slow');
@@ -51,51 +47,62 @@ $('document').ready(function(){
 		});
 	});
 
+	function getRandLeft() {
+		var maxW = $(window).width() - 60;
+		return maxW * Math.random();
+	}
+
 	function loopOne() {
-		var randleft = 1000*Math.random();
+		if($('#b1').hasClass('ordered')) return; 
+		var randleft = getRandLeft();
 		var randtop = 500*Math.random();
 		$('#b1').animate({left:randleft,bottom:randtop},10000,function(){
 			loopOne();
 		});
 	}
 	function loopTwo() {
-		var randleft = 1000*Math.random();
+		if($('#b2').hasClass('ordered')) return;
+		var randleft = getRandLeft();
 		var randtop = 500*Math.random();
 		$('#b2').animate({left:randleft,bottom:randtop},10000,function(){
 			loopTwo();
 		});
 	}
 	function loopThree() {
-		var randleft = 1000*Math.random();
+		if($('#b3').hasClass('ordered')) return;
+		var randleft = getRandLeft();
 		var randtop = 500*Math.random();
 		$('#b3').animate({left:randleft,bottom:randtop},10000,function(){
 			loopThree();
 		});
 	}
 	function loopFour() {
-		var randleft = 1000*Math.random();
+		if($('#b4').hasClass('ordered')) return;
+		var randleft = getRandLeft();
 		var randtop = 500*Math.random();
 		$('#b4').animate({left:randleft,bottom:randtop},10000,function(){
 			loopFour();
 		});
 	}
 	function loopFive() {
-		var randleft = 1000*Math.random();
+		if($('#b5').hasClass('ordered')) return;
+		var randleft = getRandLeft();
 		var randtop = 500*Math.random();
 		$('#b5').animate({left:randleft,bottom:randtop},10000,function(){
 			loopFive();
 		});
 	}
-
 	function loopSix() {
-		var randleft = 1000*Math.random();
+		if($('#b6').hasClass('ordered')) return;
+		var randleft = getRandLeft();
 		var randtop = 500*Math.random();
 		$('#b6').animate({left:randleft,bottom:randtop},10000,function(){
 			loopSix();
 		});
 	}
 	function loopSeven() {
-		var randleft = 1000*Math.random();
+		if($('#b7').hasClass('ordered')) return;
+		var randleft = getRandLeft();
 		var randtop = 500*Math.random();
 		$('#b7').animate({left:randleft,bottom:randtop},10000,function(){
 			loopSeven();
@@ -119,95 +126,115 @@ $('document').ready(function(){
 		});
 	});	
 
-	// === ✨ 核心修改点 1：送上香香软软蛋糕，让老蛋糕和猫狗同步优雅出现 🚀 ===
 	$('#cake_fadein').click(function(){
-		// 原版经典扁平蛋糕淡入[cite: 8]
 		$('.cake').fadeIn('slow');
-		
-		// 强行召唤左右护法！通过错开几百毫秒延时淡入，视觉上的出场感会非常灵动[cite: 8]
-		$('#surprise_cat').delay(400).fadeIn('slow');
-		$('#surprise_dog').delay(800).fadeIn('slow');
+		$(this).fadeOut('slow').delay(3000).promise().done(function(){
+			$('#summon_friends').fadeIn('slow');
+		});
+	});
+
+	$('#summon_friends').click(function(){
+		$('#surprise_cat').fadeIn('slow');
+		$('#surprise_dog').delay(400).fadeIn('slow'); 
 
 		$(this).fadeOut('slow').delay(3000).promise().done(function(){
 			$('#light_candle').fadeIn('slow');
 		});
 	});
 
-	// === ✨ 核心修改点 2：点击“点蜡烛”，控制原本的经典 CSS 蜡烛火苗冒出来 🕯️ ===
 	$('#light_candle').click(function(){
-		// 恢复原版经典火苗显示[cite: 8]
 		$('.fuego').fadeIn('slow');
+		$('body').addClass('dimmed-candles'); 
 
 		$(this).fadeOut('slow').promise().done(function(){
 			$('#wish_message').fadeIn('slow');
 		});
 	});
 
-		
 	$('#wish_message').click(function(){
-		 vw = $(window).width()/2;
+		vw = $(window).width()/2;
 
-		$('#b1,#b2,#b3,#b4,#b5,#b6,#b7').stop();
-		$('#b1').attr('id','b11');
-		$('#b2').attr('id','b22')
-		$('#b3').attr('id','b33')
-		$('#b4').attr('id','b44')
-		$('#b5').attr('id','b55')
-		$('#b6').attr('id','b66')
-		$('#b7').attr('id','b77')
-		$('#b11').animate({top:240, left: vw-350},500);
-		$('#b22').animate({top:240, left: vw-250},500);
-		$('#b33').animate({top:240, left: vw-150},500);
-		$('#b44').animate({top:240, left: vw-50},500);
-		$('#b55').animate({top:240, left: vw+50},500);
-		$('#b66').animate({top:240, left: vw+150},500);
-		$('#b77').animate({top:240, left: vw+250},500);
+		$('#b1,#b2,#b3,#b4,#b5,#b6,#b7').stop(true, true);
+		$('#b1,#b2,#b3,#b4,#b5,#b6,#b7').addClass('ordered');
+
+		if(isMobile()){
+			$('#b1').css({top:200, left: vw - 158}); 
+			$('#b2').css({top:200, left: vw - 113});  
+			$('#b3').css({top:200, left: vw - 68});  
+			$('#b4').css({top:200, left: vw - 23});   
+			$('#b5').css({top:200, left: vw + 22});  
+			$('#b6').css({top:200, left: vw + 67});  
+			$('#b7').css({top:200, left: vw + 112}); 
+		} else {
+			$('#b1').css({top:240, left: vw - 350});
+			$('#b2').css({top:240, left: vw - 250});
+			$('#b3').css({top:240, left: vw - 150});
+			$('#b4').css({top:240, left: vw - 50});
+			$('#b5').css({top:240, left: vw + 50});
+			$('#b6').css({top:240, left: vw + 150});
+			$('#b7').css({top:240, left: vw + 250});
+		}
+
 		$('.balloons').css('opacity','0.9');
-		$('.balloons h2').fadeIn(3000);
+		$('.balloons h2').fadeIn(2000);
+		
 		$(this).fadeOut('slow').delay(3000).promise().done(function(){
 			$('#story').fadeIn('slow');
 		});
 	});
 	
-	// === ✨ 核心修改点 3：进入文字部分时，优雅淡出经典蛋糕与猫狗，腾出完整的干净空间 📝 ===
 	$('#story').click(function(){
-		$(this).fadeOut('slow'); //[cite: 8]
+		$(this).fadeOut('slow');
+		$('body').removeClass('dimmed-candles'); 
 		
-		// 留言文字淡入前，让老蛋糕、傲娇猫咪和贪玩狗子一起平滑隐去[cite: 8]
 		$('.cake, #surprise_cat, #surprise_dog').fadeOut('fast').promise().done(function(){
-			$('.message').fadeIn('slow'); //[cite: 8]
+			$('.message').fadeIn('slow');
 		});
 		
 		var i;
-
 		function msgLoop (i) {
 			$("p:nth-child("+i+")").fadeOut('slow').delay(800).promise().done(function(){
 			i=i+1;
 			$("p:nth-child("+i+")").fadeIn('slow').delay(1000);
 			if(i==50){
 				$("p:nth-child(49)").fadeOut('slow').promise().done(function () {
-					// 当所有的文字都播放完毕，让经典老蛋糕和猫狗再次共同淡入[cite: 8]
-					$('.cake, #surprise_cat, #surprise_dog').fadeIn('fast');
-					// 🎁 同步淡入生日抽奖盲盒彩蛋区域 🎁
-					$('#gift_section').fadeIn('slow');
+					var currentVW = $(window).width()/2;
+					if(isMobile()){
+						$('#b1').css({top:150, left: currentVW - 158});
+						$('#b2').css({top:150, left: currentVW - 113});
+						$('#b3').css({top:150, left: currentVW - 68});
+						$('#b4').css({top:150, left: currentVW - 23});
+						$('#b5').css({top:150, left: currentVW + 22});
+						$('#b6').css({top:150, left: currentVW + 67});
+						$('#b7').css({top:150, left: currentVW + 112});
+					} else {
+						$('#b1').css({top:180, left: currentVW - 350});
+						$('#b2').css({top:180, left: currentVW - 250});
+						$('#b3').css({top:180, left: currentVW - 150});
+						$('#b4').css({top:180, left: currentVW - 50});
+						$('#b5').css({top:180, left: currentVW + 50});
+						$('#b6').css({top:180, left: currentVW + 150});
+						$('#b7').css({top:180, currentVW: currentVW + 250});
+					}
+					// 🛠️ 核心优化：盲盒出现阶段，直接让重叠的大蛋糕和猫狗继续处于隐藏状态，彻底释放中下部所有的黄金空间！[cite: 3]
+					$('.cake, #surprise_cat, #surprise_dog').hide();
+                    
+                    // 🚀 终极联动：同步唤醒类名锁链，让 CSS 接管完美的一屏自然流布局！
+                    $('body').addClass('ordered-active-body');
+                    $('.message').addClass('ordered-active-parent');
+					$('#gift_section').addClass('ordered-active').fadeIn('slow');
 				});
-				
 			}
 			else{
 				msgLoop(i);
 			}			
-
 		});
 		}
-		
 		msgLoop(0);
-		
 	});
 });
 
-// === 🎁 盲盒奖品逻辑配置中心 🎁 ===
-// 这里已经为你准备好了三个好玩又带特权的盲盒奖品，可以根据实际情况随时在文字内更改你的真实实体礼物
-const gifts = {
+var gifts = {
     1: {
         title: "✨ 抽出直播专属奖！",
         text: "【网易云会员】<br><br>妈妈再也不用担心放歌要看广告了！"
@@ -222,17 +249,13 @@ const gifts = {
     }
 };
 
-// 点击打开盲盒
 window.openGift = function(boxNum) {
     var prize = gifts[boxNum];
     $('#result_title').text(prize.title);
     $('#result_text').html(prize.text);
-    
-    // 弹出全屏遮罩层
     $('#gift_overlay').css('display', 'flex');
 };
 
-// 关闭遮罩层
 window.closeOverlay = function() {
     $('#gift_overlay').hide();
 };
