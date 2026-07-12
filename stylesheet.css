@@ -24,94 +24,19 @@ body {
 }
 
 @-webkit-keyframes peach_alive {
-	0%{
-		background-color: #FFDAB9;
-	}
-	25%{
-		background-color: #FFE4B5;
-	}
-	50%{
-		background-color: #FFDAB9;
-	}
-	75%{
-		background-color: #FFEFD5;
-	}
-	100%{
-		background-color: #FFDAB9;
-	}
+	0%{ background-color: #FFDAB9; }
+	25%{ background-color: #FFE4B5; }
+	50%{ background-color: #FFDAB9; }
+	75%{ background-color: #FFEFD5; }
+	100%{ background-color: #FFDAB9; }
 }
-@-moz-keyframes peach_alive {
-	0%{
-		background-color: #FFDAB9;
-	}
-	25%{
-		background-color: #FFE4B5;
-	}
-	50%{
-		background-color: #FFDAB9;
-	}
-	75%{
-		background-color: #FFEFD5;
-	}
-	100%{
-		background-color: #FFDAB9;
-	}
-}
-
-@-o-keyframes peach_alive {
-	0%{
-		background-color: #FFDAB9;
-	}
-	25%{
-		background-color: #FFE4B5;
-	}
-	50%{
-		background-color: #FFDAB9;
-	}
-	75%{
-		background-color: #FFEFD5;
-	}
-	100%{
-		background-color: #FFDAB9;
-	}
-}
-
-@-ms-keyframes peach_alive {
-	0%{
-		background-color: #FFDAB9;
-	}
-	25%{
-		background-color: #FFE4B5;
-	}
-	50%{
-		background-color: #FFDAB9;
-	}
-	75%{
-		background-color: #FFEFD5;
-	}
-	100%{
-		background-color: #FFDAB9;
-	}
-}
-
 @keyframes peach_alive {
-	0%{
-		background-color: #FFDAB9;
-	}
-	25%{
-		background-color: #FFE4B5;
-	}
-	50%{
-		background-color: #FFDAB9;
-	}
-	75%{
-		background-color: #FFEFD5;
-	}
-	100%{
-		background-color: #FFDAB9;
-	}
+	0%{ background-color: #FFDAB9; }
+	25%{ background-color: #FFE4B5; }
+	50%{ background-color: #FFDAB9; }
+	75%{ background-color: #FFEFD5; }
+	100%{ background-color: #FFDAB9; }
 }
-
 
 .bulb {
 	width: 50px;
@@ -121,960 +46,65 @@ body {
 	background-position:center 0px;
 	background-size: 50px 50px;
 }
-
 .bulb-holder {
 	height: 70px;
 }
 
-.bulb-glow-yellow {
-	background-image: url('bulb_yellow.png');
-	-webkit-animation: bulb_glow_yellow linear 5s;
-	-moz-animation: bulb_glow_yellow linear 5s;
-	-o-animation: bulb_glow_yellow linear 5s;
-	-ms-animation: bulb_glow_yellow linear 5s;
-	animation: bulb_glow_yellow linear 5s;
-}
+.bulb-glow-yellow { background-image: url('bulb_yellow.png'); animation: bulb_glow_yellow linear 5s; }
+@keyframes bulb_glow_yellow { 0%{ background-image: url('bulb.png'); opacity: 0; } 50%{ opacity: 1; } 100%{ background-image: url('bulb_yellow.png'); opacity: 1; } }
 
-@-webkit-keyframes bulb_glow_yellow {
-	0%{
-		background-image: url('bulb.png');
-		opacity: 0;
-	}
-	50%{
-		opacity: 1;
-	}
-	100%{
-		background-image: url('bulb_yellow.png');
-		opacity: 1;
-	}
-}
-@-moz-keyframes bulb_glow_yellow {
-	0%{
-		background-image: url('bulb.png');
-		opacity: 0;
-	}
-	50%{
-		opacity: 1;
-	}
-	100%{
-		background-image: url('bulb_yellow.png');
-		opacity: 1;
-	}
-}
-@-o-keyframes bulb_glow_yellow {
-	0%{
-		background-image: url('bulb.png');
-		opacity: 0;
-	}
-	50%{
-		opacity: 1;
-	}
-	100%{
-		background-image: url('bulb_yellow.png');
-		opacity: 1;
-	}
-}
-@-ms-keyframes bulb_glow_yellow {
-	0%{
-		background-image: url('bulb.png');
-		opacity: 0;
-	}
-	50%{
-		opacity: 1;
-	}
-	100%{
-		background-image: url('bulb_yellow.png');
-		opacity: 1;
-	}
-}
-@keyframes bulb_glow_yellow {
-	0%{
-		background-image: url('bulb.png');
-		opacity: 0;
-	}
-	50%{
-		opacity: 1;
-	}
-	100%{
-		background-image: url('bulb_yellow.png');
-		opacity: 1;
-	}
-}
+.bulb-glow-red { background-image: url('bulb_red.png'); animation: bulb_glow_red linear 5s; }
+@keyframes bulb_glow_red { 0%{ background-image: url('bulb.png'); opacity: 0; } 50%{ opacity: 1; } 100%{ background-image: url('bulb_red.png'); opacity: 1; } }
 
-.bulb-glow-red {
-	background-image: url('bulb_red.png');
-	-webkit-animation: bulb_glow_red linear 5s;
-	-moz-animation: bulb_glow_red linear 5s;
-	-o-animation: bulb_glow_red linear 5s;
-	-ms-animation: bulb_glow_red linear 5s;
-	animation: bulb_glow_red linear 5s;
-}
+.bulb-glow-blue { background-image: url('bulb_blue.png'); animation: bulb_glow_blue linear 5s; }
+@keyframes bulb_glow_blue { 0%{ background-image: url('bulb.png'); opacity: 0; } 50%{ opacity: 1; } 100%{ background-image: url('bulb_blue.png'); opacity: 1; } }
 
-@-webkit-keyframes bulb_glow_red {
-	0%{
-		background-image: url('bulb.png');
-		opacity: 0;
-	}
-	50%{
-		opacity: 1;
-	}
-	100%{
-		background-image: url('bulb_red.png');
-		opacity: 1;
-	}
-}
-@-moz-keyframes bulb_glow_red {
-	0%{
-		background-image: url('bulb.png');
-		opacity: 0;
-	}
-	50%{
-		opacity: 1;
-	}
-	100%{
-		background-image: url('bulb_red.png');
-		opacity: 1;
-	}
-}
-@-o-keyframes bulb_glow_red {
-	0%{
-		background-image: url('bulb.png');
-		opacity: 0;
-	}
-	50%{
-		opacity: 1;
-	}
-	100%{
-		background-image: url('bulb_red.png');
-		opacity: 1;
-	}
-}
-@-ms-keyframes bulb_glow_red {
-	0%{
-		background-image: url('bulb.png');
-		opacity: 0;
-	}
-	50%{
-		opacity: 1;
-	}
-	100%{
-		background-image: url('bulb_red.png');
-		opacity: 1;
-	}
-}
-@keyframes bulb_glow_red {
-	0%{
-		background-image: url('bulb.png');
-		opacity: 0;
-	}
-	50%{
-		opacity: 1;
-	}
-	100%{
-		background-image: url('bulb_red.png');
-		opacity: 1;
-	}
-}
-.bulb-glow-blue {
-	background-image: url('bulb_blue.png');
-	-webkit-animation: bulb_glow_blue linear 5s;
-	-moz-animation: bulb_glow_blue linear 5s;
-	-o-animation: bulb_glow_blue linear 5s;
-	-ms-animation: bulb_glow_blue linear 5s;
-	animation: bulb_glow_blue linear 5s;
-}
+.bulb-glow-green { background-image: url('bulb_green.png'); animation: bulb_glow_green linear 5s; }
+@keyframes bulb_glow_green { 0%{ background-image: url('bulb.png'); opacity: 0; } 50%{ opacity: 1; } 100%{ background-image: url('bulb_green.png'); opacity: 1; } }
 
-@-webkit-keyframes bulb_glow_blue {
-	0%{
-		background-image: url('bulb.png');
-		opacity: 0;
-	}
-	50%{
-		opacity: 1;
-	}
-	100%{
-		background-image: url('bulb_blue.png');
-		opacity: 1;
-	}
-}
-@-moz-keyframes bulb_glow_blue {
-	0%{
-		background-image: url('bulb.png');
-		opacity: 0;
-	}
-	50%{
-		opacity: 1;
-	}
-	100%{
-		background-image: url('bulb_blue.png');
-		opacity: 1;
-	}
-}
-@-o-keyframes bulb_glow_blue {
-	0%{
-		background-image: url('bulb.png');
-		opacity: 0;
-	}
-	50%{
-		opacity: 1;
-	}
-	100%{
-		background-image: url('bulb_blue.png');
-		opacity: 1;
-	}
-}
-@-ms-keyframes bulb_glow_blue {
-	0%{
-		background-image: url('bulb.png');
-		opacity: 0;
-	}
-	50%{
-		opacity: 1;
-	}
-	100%{
-		background-image: url('bulb_blue.png');
-		opacity: 1;
-	}
-}
-@keyframes bulb_glow_blue {
-	0%{
-		background-image: url('bulb.png');
-		opacity: 0;
-	}
-	50%{
-		opacity: 1;
-	}
-	100%{
-		background-image: url('bulb_blue.png');
-		opacity: 1;
-	}
-}
+.bulb-glow-pink { background-image: url('bulb_pink.png'); animation: bulb_glow_pink linear 5s; }
+@keyframes bulb_glow_pink { 0%{ background-image: url('bulb.png'); opacity: 0; } 50%{ opacity: 1; } 100%{ background-image: url('bulb_pink.png'); opacity: 1; } }
 
-.bulb-glow-green {
-	background-image: url('bulb_green.png');
-	-webkit-animation: bulb_glow_green linear 5s;
-	-moz-animation: bulb_glow_green linear 5s;
-	-o-animation: bulb_glow_green linear 5s;
-	-ms-animation: bulb_glow_green linear 5s;
-	animation: bulb_glow_green linear 5s;
-}
-
-@-webkit-keyframes bulb_glow_green {
-	0%{
-		background-image: url('bulb.png');
-		opacity: 0;
-	}
-	50%{
-		opacity: 1;
-	}
-	100%{
-		background-image: url('bulb_green.png');
-		opacity: 1;
-	}
-}
-@-moz-keyframes bulb_glow_green {
-	0%{
-		background-image: url('bulb.png');
-		opacity: 0;
-	}
-	50%{
-		opacity: 1;
-	}
-	100%{
-		background-image: url('bulb_green.png');
-		opacity: 1;
-	}
-}
-@-o-keyframes bulb_glow_green {
-	0%{
-		background-image: url('bulb.png');
-		opacity: 0;
-	}
-	50%{
-		opacity: 1;
-	}
-	100%{
-		background-image: url('bulb_green.png');
-		opacity: 1;
-	}
-}
-@-ms-keyframes bulb_glow_green {
-	0%{
-		background-image: url('bulb.png');
-		opacity: 0;
-	}
-	50%{
-		opacity: 1;
-	}
-	100%{
-		background-image: url('bulb_green.png');
-		opacity: 1;
-	}
-}
-@keyframes bulb_glow_green {
-	0%{
-		background-image: url('bulb.png');
-		opacity: 0;
-	}
-	50%{
-		opacity: 1;
-	}
-	100%{
-		background-image: url('bulb_green.png');
-		opacity: 1;
-	}
-}
-
-.bulb-glow-pink {
-	background-image: url('bulb_pink.png');
-	-webkit-animation: bulb_glow_pink linear 5s;
-	-moz-animation: bulb_glow_pink linear 5s;
-	-o-animation: bulb_glow_pink linear 5s;
-	-ms-animation: bulb_glow_pink linear 5s;
-	animation: bulb_glow_pink linear 5s;
-}
-
-@-webkit-keyframes bulb_glow_pink {
-	0%{
-		background-image: url('bulb.png');
-		opacity: 0;
-	}
-	50%{
-		opacity: 1;
-	}
-	100%{
-		background-image: url('bulb_pink.png');
-		opacity: 1;
-	}
-}
-@-moz-keyframes bulb_glow_pink {
-	0%{
-		background-image: url('bulb.png');
-		opacity: 0;
-	}
-	50%{
-		opacity: 1;
-	}
-	100%{
-		background-image: url('bulb_pink.png');
-		opacity: 1;
-	}
-}
-@-o-keyframes bulb_glow_pink {
-	0%{
-		background-image: url('bulb.png');
-		opacity: 0;
-	}
-	50%{
-		opacity: 1;
-	}
-	100%{
-		background-image: url('bulb_pink.png');
-		opacity: 1;
-	}
-}
-@-ms-keyframes bulb_glow_pink {
-	0%{
-		background-image: url('bulb.png');
-		opacity: 0;
-	}
-	50%{
-		opacity: 1;
-	}
-	100%{
-		background-image: url('bulb_pink.png');
-		opacity: 1;
-	}
-}
-@keyframes bulb_glow_pink {
-	0%{
-		background-image: url('bulb.png');
-		opacity: 0;
-	}
-	50%{
-		opacity: 1;
-	}
-	100%{
-		background-image: url('bulb_pink.png');
-		opacity: 1;
-	}
-}
-
-.bulb-glow-orange {
-	background-image: url('bulb_orange.png');
-	-webkit-animation: bulb_glow_orange linear 5s;
-	-moz-animation: bulb_glow_orange linear 5s;
-	-o-animation: bulb_glow_orange linear 5s;
-	-ms-animation: bulb_glow_orange linear 5s;
-	animation: bulb_glow_orange linear 5s;
-}
-
-@-webkit-keyframes bulb_glow_orange {
-	0%{
-		background-image: url('bulb.png');
-		opacity: 0;
-	}
-	50%{
-		opacity: 1;
-	}
-	100%{
-		background-image: url('bulb_orange.png');
-		opacity: 1;
-	}
-}
-@-moz-keyframes bulb_glow_orange {
-	0%{
-		background-image: url('bulb.png');
-		opacity: 0;
-	}
-	50%{
-		opacity: 1;
-	}
-	100%{
-		background-image: url('bulb_orange.png');
-		opacity: 1;
-	}
-}
-@-o-keyframes bulb_glow_orange {
-	0%{
-		background-image: url('bulb.png');
-		opacity: 0;
-	}
-	50%{
-		opacity: 1;
-	}
-	100%{
-		background-image: url('bulb_orange.png');
-		opacity: 1;
-	}
-}
-@-ms-keyframes bulb_glow_orange {
-	0%{
-		background-image: url('bulb.png');
-		opacity: 0;
-	}
-	50%{
-		opacity: 1;
-	}
-	100%{
-		background-image: url('bulb_orange.png');
-		opacity: 1;
-	}
-}
-@keyframes bulb_glow_orange {
-	0%{
-		background-image: url('bulb.png');
-		opacity: 0;
-	}
-	50%{
-		opacity: 1;
-	}
-	100%{
-		background-image: url('bulb_orange.png');
-		opacity: 1;
-	}
-}
-
+.bulb-glow-orange { background-image: url('bulb_orange.png'); animation: bulb_glow_orange linear 5s; }
+@keyframes bulb_glow_orange { 0%{ background-image: url('bulb.png'); opacity: 0; } 50%{ opacity: 1; } 100%{ background-image: url('bulb_orange.png'); opacity: 1; } }
 
 /*after music*/
-.bulb-glow-yellow-after {
-	background-image: url('bulb_yellow.png');
-	-webkit-animation: bulb_glow_yellow_after linear 1s infinite;
-	-moz-animation: bulb_glow_yellow_after linear 1s infinite;
-	-o-animation: bulb_glow_yellow_after linear 1s infinite;
-	-ms-animation: bulb_glow_yellow_after linear 1s infinite;
-	animation: bulb_glow_yellow_after linear 1s infinite;
-}
+.bulb-glow-yellow-after { background-image: url('bulb_yellow.png'); animation: bulb_glow_yellow_after linear 1s infinite; }
+@keyframes bulb_glow_yellow_after { 0%, 100%{ background-image: url('bulb.png'); } 50%{ background-image: url('bulb_yellow.png'); } }
 
-@-webkit-keyframes bulb_glow_yellow_after {
-	0%{
-		background-image: url('bulb.png');
-	}
-	50%{
-		background-image: url('bulb_yellow.png');
-	}
-	100%{
-		background-image: url('bulb.png');
-	}
-}
-@-moz-keyframes bulb_glow_yellow_after {
-	0%{
-		background-image: url('bulb.png');
-	}
-	50%{
-		background-image: url('bulb_yellow.png');
-	}
-	100%{
-		background-image: url('bulb.png');
-	}
-}
-@-o-keyframes bulb_glow_yellow_after {
-	0%{
-		background-image: url('bulb.png');
-	}
-	50%{
-		background-image: url('bulb_yellow.png');
-	}
-	100%{
-		background-image: url('bulb.png');
-	}
-}
-@-ms-keyframes bulb_glow_yellow_after {
-	0%{
-		background-image: url('bulb.png');
-	}
-	50%{
-		background-image: url('bulb_yellow.png');
-	}
-	100%{
-		background-image: url('bulb.png');
-	}
-}
-@keyframes bulb_glow_yellow_after {
-	0%{
-		background-image: url('bulb.png');
-	}
-	50%{
-		background-image: url('bulb_yellow.png');
-	}
-	100%{
-		background-image: url('bulb.png');
-	}
-}
+.bulb-glow-red-after { background-image: url('bulb_red.png'); animation: bulb_glow_red_after linear 1.2s infinite; }
+@keyframes bulb_glow_red_after { 0%, 100%{ background-image: url('bulb.png'); } 50%{ background-image: url('bulb_red.png'); } }
 
-.bulb-glow-red-after {
-	background-image: url('bulb_red.png');
-	-webkit-animation: bulb_glow_red_after linear 1.2s infinite;
-	-moz-animation: bulb_glow_red_after linear 1.2s infinite;
-	-o-animation: bulb_glow_red_after linear 1.2s infinite;
-	-ms-animation: bulb_glow_red_after linear 1.2s infinite;
-	animation: bulb_glow_red_after linear 1.2s infinite;
-}
+.bulb-glow-blue-after { background-image: url('bulb_blue.png'); animation: bulb_glow_blue_after linear 1.4s infinite; }
+@keyframes bulb_glow_blue_after { 0%, 100%{ background-image: url('bulb.png'); } 50%{ background-image: url('bulb_blue.png'); } }
 
-@-webkit-keyframes bulb_glow_red_after {
-	0%{
-		background-image: url('bulb.png');
-	}
-	50%{
-		background-image: url('bulb_red.png');
-	}
-	100%{
-		background-image: url('bulb.png');
-	}
-}
-@-moz-keyframes bulb_glow_red_after {
-	0%{
-		background-image: url('bulb.png');
-	}
-	50%{
-		background-image: url('bulb_red.png');
-	}
-	100%{
-		background-image: url('bulb.png');
-	}
-}
-@-o-keyframes bulb_glow_red_after {
-	0%{
-		background-image: url('bulb.png');
-	}
-	50%{
-		background-image: url('bulb_red.png');
-	}
-	100%{
-		background-image: url('bulb.png');
-	}
-}
-@-ms-keyframes bulb_glow_red_after {
-	0%{
-		background-image: url('bulb.png');
-	}
-	50%{
-		background-image: url('bulb_red.png');
-	}
-	100%{
-		background-image: url('bulb.png');
-	}
-}
-@keyframes bulb_glow_red_after {
-	0%{
-		background-image: url('bulb.png');
-	}
-	50%{
-		background-image: url('bulb_red.png');
-	}
-	100%{
-		background-image: url('bulb.png');
-	}
-}
+.bulb-glow-green-after { background-image: url('bulb_green.png'); animation: bulb_glow_green_after linear 1.8s infinite; }
+@keyframes bulb_glow_green_after { 0%, 100%{ background-image: url('bulb.png'); } 50%{ background-image: url('bulb_green.png'); } }
 
-.bulb-glow-blue-after {
-	background-image: url('bulb_blue.png');
-	-webkit-animation: bulb_glow_blue_after linear 1.4s infinite;
-	-moz-animation: bulb_glow_blue_after linear 1.4s infinite;
-	-o-animation: bulb_glow_blue_after linear 1.4s infinite;
-	-ms-animation: bulb_glow_blue_after linear 1.4s infinite;
-	animation: bulb_glow_blue_after linear 1.4s infinite;
-}
+.bulb-glow-pink-after { background-image: url('bulb_pink.png'); animation: bulb_glow_pink_after linear 2s infinite; }
+@keyframes bulb_glow_pink_after { 0%, 100%{ background-image: url('bulb.png'); } 50%{ background-image: url('bulb_pink.png'); } }
 
-@-webkit-keyframes bulb_glow_blue_after {
-	0%{
-		background-image: url('bulb.png');
-	}
-	50%{
-		background-image: url('bulb_blue.png');
-	}
-	100%{
-		background-image: url('bulb.png');
-	}
-}
-@-moz-keyframes bulb_glow_blue_after {
-	0%{
-		background-image: url('bulb.png');
-	}
-	50%{
-		background-image: url('bulb_blue.png');
-	}
-	100%{
-		background-image: url('bulb.png');
-	}
-}
-@-o-keyframes bulb_glow_blue_after {
-	0%{
-		background-image: url('bulb.png');
-	}
-	50%{
-		background-image: url('bulb_blue.png');
-	}
-	100%{
-		background-image: url('bulb.png');
-	}
-}
-@-ms-keyframes bulb_glow_blue_after {
-	0%{
-		background-image: url('bulb.png');
-	}
-	50%{
-		background-image: url('bulb_blue.png');
-	}
-	100%{
-		background-image: url('bulb.png');
-	}
-}
-@keyframes bulb_glow_blue_after {
-	0%{
-		background-image: url('bulb.png');
-	}
-	50%{
-		background-image: url('bulb_blue.png');
-	}
-	100%{
-		background-image: url('bulb.png');
-	}
-}
-.bulb-glow-green-after {
-	background-image: url('bulb_green.png');
-	-webkit-animation: bulb_glow_green_after linear 1.8s infinite;
-	-moz-animation: bulb_glow_green_after linear 1.8s infinite;
-	-o-animation: bulb_glow_green_after linear 1.8s infinite;
-	-ms-animation: bulb_glow_green_after linear 1.8s infinite;
-	animation: bulb_glow_green_after linear 1.8s infinite;
-}
+.bulb-glow-orange-after { background-image: url('bulb_orange.png'); animation: bulb_glow_orange_after linear 2.2s infinite; }
+@keyframes bulb_glow_orange_after { 0%, 100%{ background-image: url('bulb.png'); } 50%{ background-image: url('bulb_orange.png'); } }
 
-@-webkit-keyframes bulb_glow_green_after {
-	0%{
-		background-image: url('bulb.png');
-	}
-	50%{
-		background-image: url('bulb_green.png');
-	}
-	100%{
-		background-image: url('bulb.png');
-	}
-}
-
-@-moz-keyframes bulb_glow_green_after {
-	0%{
-		background-image: url('bulb.png');
-	}
-	50%{
-		background-image: url('bulb_green.png');
-	}
-	100%{
-		background-image: url('bulb.png');
-	}
-}
-@-o-keyframes bulb_glow_green_after {
-	0%{
-		background-image: url('bulb.png');
-	}
-	50%{
-		background-image: url('bulb_green.png');
-	}
-	100%{
-		background-image: url('bulb.png');
-	}
-}
-@-ms-keyframes bulb_glow_green_after {
-	0%{
-		background-image: url('bulb.png');
-	}
-	50%{
-		background-image: url('bulb_green.png');
-	}
-	100%{
-		background-image: url('bulb.png');
-	}
-}
-@keyframes bulb_glow_green_after {
-	0%{
-		background-image: url('bulb.png');
-	}
-	50%{
-		background-image: url('bulb_green.png');
-	}
-	100%{
-		background-image: url('bulb.png');
-	}
-}
-.bulb-glow-pink-after {
-	background-image: url('bulb_pink.png');
-	-webkit-animation: bulb_glow_pink_after linear 2s infinite;
-	-moz-animation: bulb_glow_pink_after linear 2s infinite;
-	-o-animation: bulb_glow_pink_after linear 2s infinite;
-	-ms-animation: bulb_glow_pink_after linear 2s infinite;
-	animation: bulb_glow_pink_after linear 2s infinite;
-}
-
-@-webkit-keyframes bulb_glow_pink_after {
-	0%{
-		background-image: url('bulb.png');
-	}
-	50%{
-		background-image: url('bulb_pink.png');
-	}
-	100%{
-		background-image: url('bulb.png');
-	}
-}
-@-moz-keyframes bulb_glow_pink_after {
-	0%{
-		background-image: url('bulb.png');
-	}
-	50%{
-		background-image: url('bulb_pink.png');
-	}
-	100%{
-		background-image: url('bulb.png');
-	}
-}
-@-o-keyframes bulb_glow_pink_after {
-	0%{
-		background-image: url('bulb.png');
-	}
-	50%{
-		background-image: url('bulb_pink.png');
-	}
-	100%{
-		background-image: url('bulb.png');
-	}
-}
-@-ms-keyframes bulb_glow_pink_after {
-	0%{
-		background-image: url('bulb.png');
-	}
-	50%{
-		background-image: url('bulb_pink.png');
-	}
-	100%{
-		background-image: url('bulb.png');
-	}
-}
-@keyframes bulb_glow_pink_after {
-	0%{
-		background-image: url('bulb.png');
-	}
-	50%{
-		background-image: url('bulb_pink.png');
-	}
-	100%{
-		background-image: url('bulb_pink.png');
-	}
-}
-.bulb-glow-orange-after {
-	background-image: url('bulb_orange.png');
-	-webkit-animation: bulb_glow_orange_after linear 2.2s infinite;
-	-moz-animation: bulb_glow_orange_after linear 2.2s infinite;
-	-o-animation: bulb_glow_orange_after linear 2.2s infinite;
-	-ms-animation: bulb_glow_orange_after linear 2.2s infinite;
-	animation: bulb_glow_orange_after linear 2.2s infinite;
-}
-
-@-webkit-keyframes bulb_glow_orange_after {
-	0%{
-		background-image: url('bulb.png');
-	}
-	50%{
-		background-image: url('bulb_orange.png');
-	}
-	100%{
-		background-image: url('bulb.png');
-	}
-}
-@-moz-keyframes bulb_glow_orange_after {
-	0%{
-		background-image: url('bulb.png');
-	}
-	50%{
-		background-image: url('bulb_orange.png');
-	}
-	100%{
-		background-image: url('bulb.png');
-	}
-}
-@-o-keyframes bulb_glow_orange_after {
-	0%{
-		background-image: url('bulb.png');
-	}
-	50%{
-		background-image: url('bulb_orange.png');
-	}
-	100%{
-		background-image: url('bulb.png');
-	}
-}
-@-ms-keyframes bulb_glow_orange_after {
-	0%{
-		background-image: url('bulb.png');
-	}
-	50%{
-		background-image: url('bulb_orange.png');
-	}
-	100%{
-		background-image: url('bulb.png');
-	}
-}
-@keyframes bulb_glow_orange_after {
-	0%{
-		background-image: url('bulb.png');
-	}
-	50%{
-		background-image: url('bulb_orange.png');
-	}
-	100%{
-		background-image: url('bulb.png');
-	}
-}
-audio {
-	display: none;
-}
+audio { display: none; }
 
 .bannar {
 	max-width: 100%;
-	-webkit-transform:translate(0px,-500px);
-	-moz-transform:translate(0px,-500px);
-	-o-transform:translate(0px,-500px);
-	-ms-transform:translate(0px,-500px);
 	transform:translate(0px,-500px);
-
 }
 .bannar-come {
-	-webkit-animation: bannar_come linear 6s;
-	-webkit-transform:translate(0px,0px);
-	-moz-animation: bannar_come linear 6s;
-	-moz-transform:translate(0px,0px);
-	-o-animation: bannar_come linear 6s;
-	-o-transform:translate(0px,0px);
-	-ms-animation: bannar_come linear 6s;
-	-ms-transform:translate(0px,0px);
 	animation: bannar_come linear 6s;
 	transform:translate(0px,0px);
 }
-@-webkit-keyframes bannar_come {
-	0%{
-		-webkit-transform:translate(0px,-1000px);
-	}
-	33%{
-		-webkit-transform:translate(0px,0px);
-		-webkit-transform:rotate(10deg);
-		/*-webkit-transform:scale(1.5);*/
-	}
-	66% {
-		-webkit-transform:translate(0px,100px);
-		-webkit-transform:rotate(-10deg);
-	}
-	100% {
-		-webkit-transform:translate(0px,0px);
-	}
-}
-@-moz-keyframes bannar_come {
-	0%{
-		-moz-transform:translate(0px,-1000px);
-	}
-	33%{
-		-moz-transform:translate(0px,0px);
-		-moz-transform:rotate(10deg);
-		/*-webkit-transform:scale(1.5);*/
-	}
-	66% {
-		-moz-transform:translate(0px,100px);
-		-moz-transform:rotate(-10deg);
-	}
-	100% {
-		-moz-transform:translate(0px,0px);
-	}
-}
-@-o-keyframes bannar_come {
-	0%{
-		-o-transform:translate(0px,-1000px);
-	}
-	33%{
-		-o-transform:translate(0px,0px);
-		-o-transform:rotate(10deg);
-		/*-webkit-transform:scale(1.5);*/
-	}
-	66% {
-		-o-transform:translate(0px,100px);
-		-o-transform:rotate(-10deg);
-	}
-	100% {
-		-o-transform:translate(0px,0px);
-	}
-}
-@-ms-keyframes bannar_come {
-	0%{
-		-ms-transform:translate(0px,-1000px);
-	}
-	33%{
-		-ms-transform:translate(0px,0px);
-		-ms-transform:rotate(10deg);
-		/*-webkit-transform:scale(1.5);*/
-	}
-	66% {
-		-ms-transform:translate(0px,100px);
-		-ms-transform:rotate(-10deg);
-	}
-	100% {
-		-ms-transform:translate(0px,0px);
-	}
-}
 @keyframes bannar_come {
-	0%{
-		transform:translate(0px,-1000px);
-	}
-	33%{
-		transform:translate(0px,0px);
-		transform:rotate(10deg);
-		/*-webkit-transform:scale(1.5);*/
-	}
-	66% {
-		transform:translate(0px,100px);
-		transform:rotate(-10deg);
-	}
-	100% {
-		transform:translate(0px,0px);
-	}
+	0%{ transform:translate(0px,-1000px); }
+	33%{ transform:translate(0px,0px); transform:rotate(10deg); }
+	66% { transform:translate(0px,100px); transform:rotate(-10deg); }
+	100% { transform:translate(0px,0px); }
 }
 
+/* 💻 电脑端气球初始大尺寸 */
 .balloons {
 	position: fixed;
 	bottom: -200px;
@@ -1093,219 +123,36 @@ audio {
 	text-shadow: 5px 5px 5px #FFF;
 	display: none;
 }
-#b1,#b11 {
-	background-image: url('b1.png');
-}
-#b2,#b22 {
-	background-image: url('b2.png');
-}
-#b3,#b33 {
-	background-image: url('b3.png');
-}
-#b4,#b44{
-	background-image: url('b4.png');
-}
-#b5,#b55{
-	background-image: url('b5.png');
-}
-#b6,#b66{
-	background-image: url('b6.png');
-}
-#b7,#b77{
-	background-image: url('b7.png');
-}
-.balloons-rotate-behaviour-one {
-	-webkit-animation: balloons_rotate_one linear 10s infinite;
-	-webkit-transform: rotate(30deg);
-	-moz-animation: balloons_rotate_one linear 10s infinite;
-	-moz-transform: rotate(30deg);
-	-o-animation: balloons_rotate_one linear 10s infinite;
-	-o-transform: rotate(30deg);
-	-ms-animation: balloons_rotate_one linear 10s infinite;
-	-ms-transform: rotate(30deg);
-	animation: balloons_rotate_one linear 10s infinite;
-	transform: rotate(30deg);
-}
-@-webkit-keyframes balloons_rotate_one {
-	0% {
-		-webkit-transform: rotate(30deg);
-	}
-	50% {
-		-webkit-transform: rotate(-30deg);
-	}
-	100% {
-		-webkit-transform: rotate(30deg);
-	}
-}
-@-moz-keyframes balloons_rotate_one {
-	0% {
-		-moz-transform: rotate(30deg);
-	}
-	50% {
-		-moz-transform: rotate(-30deg);
-	}
-	100% {
-		-moz-transform: rotate(30deg);
-	}
-}
-@-o-keyframes balloons_rotate_one {
-	0% {
-		-o-transform: rotate(30deg);
-	}
-	50% {
-		-o-transform: rotate(-30deg);
-	}
-	100% {
-		-o-transform: rotate(30deg);
-	}
-}
-@-ms-keyframes balloons_rotate_one {
-	0% {
-		-ms-transform: rotate(30deg);
-	}
-	50% {
-		-ms-transform: rotate(-30deg);
-	}
-	100% {
-		-ms-transform: rotate(30deg);
-	}
-}
-@keyframes balloons_rotate_one {
-	0% {
-		transform: rotate(30deg);
-	}
-	50% {
-		transform: rotate(-30deg);
-	}
-	100% {
-		transform: rotate(30deg);
-	}
-}
-.balloons-rotate-behaviour-two {
-	-webkit-animation: balloons_rotate_two linear 10s infinite;
-	-webkit-transform: rotate(-20deg);
-	-moz-animation: balloons_rotate_two linear 10s infinite;
-	-moz-transform: rotate(-20deg);
-	-o-animation: balloons_rotate_two linear 10s infinite;
-	-o-transform: rotate(-20deg);
-	-ms-animation: balloons_rotate_two linear 10s infinite;
-	-ms-transform: rotate(-20deg);
-	animation: balloons_rotate_two linear 10s infinite;
-	transform: rotate(-20deg);
-}
-@-webkit-keyframes balloons_rotate_two {
-	0% {
-		-webkit-transform: rotate(-20deg);
-	}
-	50% {
-		-webkit-transform: rotate(20deg);
-	}
-	100% {
-		-webkit-transform: rotate(-20deg);
-	}
-}
-@-moz-keyframes balloons_rotate_two {
-	0% {
-		-moz-transform: rotate(-20deg);
-	}
-	50% {
-		-moz-transform: rotate(20deg);
-	}
-	100% {
-		-moz-transform: rotate(-20deg);
-	}
-}
-@-o-keyframes balloons_rotate_two {
-	0% {
-		-o-transform: rotate(-20deg);
-	}
-	50% {
-		-o-transform: rotate(20deg);
-	}
-	100% {
-		-o-transform: rotate(-20deg);
-	}
-}
-@-ms-keyframes balloons_rotate_two {
-	0% {
-		-ms-transform: rotate(-20deg);
-	}
-	50% {
-		-ms-transform: rotate(20deg);
-	}
-	100% {
-		-ms-transform: rotate(-20deg);
-	}
-}
-@keyframes balloons_rotate_two {
-	0% {
-		transform: rotate(-20deg);
-	}
-	50% {
-		transform: rotate(20deg);
-	}
-	100% {
-		transform: rotate(-20deg);
-	}
-}
+#b1,#b11 { background-image: url('b1.png'); }
+#b2,#b22 { background-image: url('b2.png'); }
+#b3,#b33 { background-image: url('b3.png'); }
+#b4,#b44{ background-image: url('b4.png'); }
+#b5,#b55{ background-image: url('b5.png'); }
+#b6,#b66{ background-image: url('b6.png'); }
+#b7,#b77{ background-image: url('b7.png'); }
 
-.balloon-border{
-	position: fixed;
-	top:100%;
-	opacity: 0.5;
-	z-index: 9999;
-}
-.control-panel {
-	position: fixed;
-	bottom: 0;
-	padding:10px 0px 10px 0px;
-}
-#play, #bannar_coming, #balloons_flying,#cake_fadein,#light_candle,#wish_message,#story {
-	display: none;
-}
+.balloons-rotate-behaviour-one { animation: balloons_rotate_one linear 10s infinite; transform: rotate(30deg); }
+@keyframes balloons_rotate_one { 0%, 100% { transform: rotate(30deg); } 50% { transform: rotate(-30deg); } }
 
-.cake-cover {
-	margin-top: 50px;
-}
-.message {
-	margin-top: 200px;
-	display: none;
-}
-.message p {
-	font-family: 'Signika', sans-serif;
-	font-size: 30px;
-	text-transform: uppercase;
-	color: #C4515C;
-	text-shadow: 2px 2px 2px #FFF;
-	display: none;
-	font-weight: bold;
-}
+.balloons-rotate-behaviour-two { animation: balloons_rotate_two linear 10s infinite; transform: rotate(-20deg); }
+@keyframes balloons_rotate_two { 0%, 100% { transform: rotate(-20deg); } 50% { transform: rotate(20deg); } }
+
+.balloon-border{ position: fixed; top:100%; opacity: 0.5; z-index: 9999; }
+#play, #bannar_coming, #balloons_flying,#cake_fadein,#light_candle,#wish_message,#story { display: none; }
 
 .btn-primary {
-        border-color: #466baf;
-        padding: 10px;
-        text-transform: uppercase;
-        font-family: 'Signika', sans-serif;
-        font-weight: 700;
-        color: #fff;
-        background-color: #466baf;
+    border-color: #466baf;
+    padding: 10px;
+    text-transform: uppercase;
+    font-family: 'Signika', sans-serif;
+    font-weight: 700;
+    color: #fff;
+    background-color: #466baf;
 }
-    .btn-primary:hover,
-    .btn-primary:focus,
-    .btn-primary:active,
-    .btn-primary.active,
-    .open .dropdown-toggle.btn-primary {
-        border-color: #fff;
-        color: #fff;
-        background-color: #466baf;
-    }
-
 
 /* ==========================================================
-   ✨ 终极收官：巨幕版猫狗守候 + 前后空间错落 + 蛋糕整体下移布局
+   ✨ 响应式核心布局 environment
    ========================================================== */
-
-/* 1. 核心微调：将老蛋糕和猫狗作为整体向下平移，拉开与彩旗的距离 */
 .cake-cover {
     position: relative !important;
     top: auto !important;
@@ -1313,73 +160,130 @@ audio {
     transform: none !important;
     width: 100% !important;
     max-width: none !important;
-    margin-top: 140px !important; /* 💡 从原先的 50px 大幅增加到 140px，把蛋糕和宠物整体优雅下移 */
+    margin-top: 140px !important; 
     z-index: 200;
 }
 
-/* ==========================================================
-   ✨ 细节校正：将大尺寸猫狗精准下沉至蛋糕地平线，避开气球
-   ========================================================== */
-
 .surprise-pet {
     position: absolute !important;
-    bottom: -150px !important;  /* 💡 核心修复：从 -10px 大幅下沉至 -150px，强行拉开与气球的距离，让它们坐在蛋糕两侧的地平线上 */
-    width: 260px !important;    /* 保持巨幕版霸气尺寸 */
-    height: auto !important;
-    z-index: 90 !important;     /* 依然保持在气球下方图层，形成穿插感 */
+    z-index: 90 !important; 
 }
 
-/* 左侧巨幕版（傲娇淡金猫咪）：保持完美的蛋糕左侧立柱式排版 */
-#surprise_cat {
-    left: calc(50% - 410px) !important; /* 随着尺寸变大，稍微再往左推开一点点，形成大气的全家福合影错落 */
-    right: auto !important;
-    transform-origin: bottom center;
-    animation: catCuteFloat 3.5s infinite ease-in-out;
-}
-
-/* 右侧巨幕版（大毛孩子狗狗）：对称贴合在蛋糕右侧 */
-#surprise_dog {
-    right: calc(50% - 410px) !important; /* 对称向右推开 */
-    left: auto !important;
-    transform-origin: bottom center;
-    animation: dogCuteFloat 3s infinite ease-in-out;
-}
-
-/* 3. 专属扁平风：放大后的微晃物理动画（保持轻微呼吸感即可，防止放大后晃得太剧烈） */
 @keyframes catCuteFloat {
-    0%, 100% {
-        transform: translateY(0) rotate(0deg);
-    }
-    50% {
-        transform: translateY(-8px) rotate(-1deg); /* 温柔的呼吸感上下浮动 */
-    }
+    0%, 100% { transform: translateY(0) rotate(0deg); }
+    50% { transform: translateY(-8px) rotate(-1deg); }
 }
-
 @keyframes dogCuteFloat {
-    0%, 100% {
-        transform: translateY(0) rotate(0deg);
-    }
-    50% {
-        transform: translateY(-12px) rotate(1.5deg); /* 狗狗稍微跳动多一点点 */
-    }
+    0%, 100% { transform: translateY(0) rotate(0deg); }
+    50% { transform: translateY(-12px) rotate(1.5deg); }
 }
 
-/* 4. 同步调整下方留言区域的触发间距，确保文字升起时完美避开下移后的蛋糕 */
-.message {
-    margin-top: 260px !important; /* 随着蛋糕下移，留言板起始间距也从 200px 顺延下移到 260px */
-    padding-top: 0 !important;
-    position: relative;
-    z-index: 300;
+/* 💻 【电脑端大屏布局】 */
+@media screen and (min-width: 851px) {
+    .surprise-pet {
+        width: 260px !important; 
+        bottom: -150px !important;
+    }
+    #surprise_cat {
+        left: calc(50% - 410px) !important;
+        transform-origin: bottom center;
+        animation: catCuteFloat 3.5s infinite ease-in-out;
+    }
+    #surprise_dog {
+        right: calc(50% - 410px) !important;
+        transform-origin: bottom center;
+        animation: dogCuteFloat 3s infinite ease-in-out;
+    }
+    .message { margin-top: 260px !important; }
+}
+
+/* 📱 【微信/手机竖屏专属基础样式覆盖】 */
+@media screen and (max-width: 850px) {
+    /* 🛠️ 强力死锁：保证手机端气球从一出生满天飞阶段就是精巧小尺寸 */
+    .balloons {
+        width: 55px !important;
+        height: 101px !important;
+        background-size: 55px 101px !important;
+    }
+    
+    .balloons h2 {
+        font-size: 24px !important; 
+        line-height: 40px !important;
+    }
+
+    .surprise-pet {
+        width: 220px !important;   
+        bottom: -142px !important; 
+    }
+    
+    #surprise_cat {
+        left: calc(50% - 245px) !important; 
+        right: auto !important;
+        transform-origin: bottom center;
+        animation: catCuteFloat 3.5s infinite ease-in-out;
+    }
+    
+    #surprise_dog {
+        right: calc(50% - 245px) !important; 
+        left: auto !important;
+        transform-origin: bottom center;
+        animation: dogCuteFloat 3s infinite ease-in-out;
+    }
+    
+    .message {
+        margin-top: 200px !important; 
+    }
 }
 
 /* ==========================================================
-   ✨ 抽奖彩蛋环节：炫酷盲盒与弹窗交互样式
+   🚨 【CSS 强力队形排队死锁】 🚨
    ========================================================== */
 
-.gift-container {
-    margin-bottom: 50px;
+/* 电脑端大屏死锁队形 */
+@media screen and (min-width: 851px) {
+    .balloons.ordered {
+        animation: none !important;
+        transform: rotate(0deg) !important;
+        top: 240px !important;
+    }
+    .balloons.ordered h2 { display: block !important; transform: none !important; }
+    
+    #b1.ordered  { left: calc(50% - 350px) !important; }
+    #b2.ordered  { left: calc(50% - 250px) !important; }
+    #b3.ordered  { left: calc(50% - 150px) !important; }
+    #b4.ordered  { left: calc(50% - 50px) !important; }
+    #b5.ordered  { left: calc(50% + 50px) !important; }
+    #b6.ordered  { left: calc(50% + 150px) !important; }
+    #b7.ordered  { left: calc(50% + 250px) !important; }
 }
 
+/* 📱 手机竖屏微信端死锁队形 */
+@media screen and (max-width: 850px) {
+    .balloons.ordered {
+        animation: none !important;               
+        transform: rotate(0deg) !important;       
+        top: 200px !important;                    
+    }
+    
+    .balloons.ordered h2 {
+        display: block !important;
+        transform: none !important;
+    }
+    
+    /* 严格居中黄金公式 */
+    #b1.ordered  { left: calc(50% - 158px) !important; } 
+    #b2.ordered  { left: calc(50% - 113px) !important; } 
+    #b3.ordered  { left: calc(50% - 68px) !important;  } 
+    #b4.ordered  { left: calc(50% - 23px) !important;  } 
+    #b5.ordered  { left: calc(50% + 22px) !important;  } 
+    #b6.ordered  { left: calc(50% + 67px) !important;  } 
+    #b7.ordered  { left: calc(50% + 112px) !important; } 
+}
+
+/* ==========================================================
+   🎁 抽奖彩蛋盲盒基础样式
+   ========================================================== */
+.gift-container { margin-bottom: 50px; }
 .gift-box {
     cursor: pointer;
     background: rgba(255, 255, 255, 0.9);
@@ -1390,86 +294,149 @@ audio {
     box-shadow: 0 6px 15px rgba(0,0,0,0.1);
     transition: all 0.3s ease;
 }
-
-/* 鼠标悬停或者手机端触摸时，礼盒放大并微微颤动 */
 .gift-box:hover {
     transform: scale(1.15) translateY(-5px);
     background: #FFF0F5;
     box-shadow: 0 10px 25px rgba(196, 81, 92, 0.3);
 }
+.gift-icon { font-size: 50px; animation: boxWobble 2s infinite ease-in-out; }
+.gift-label { font-family: 'Signika', sans-serif; font-size: 16px; font-weight: bold; color: #C4515C; margin-top: 10px; }
 
-.gift-icon {
-    font-size: 50px;
-    animation: boxWobble 2s infinite ease-in-out;
-}
-
-.gift-label {
-    font-family: 'Signika', sans-serif;
-    font-size: 16px;
-    font-weight: bold;
-    color: #C4515C;
-    margin-top: 10px;
-}
-
-/* 盲盒礼包温柔晃动小动画 */
 @keyframes boxWobble {
     0%, 100% { transform: rotate(0deg); }
     25% { transform: rotate(3deg); }
     75% { transform: rotate(-3deg); }
 }
 
-/* 抽奖结果中奖弹窗遮罩 */
 .gift-result-overlay {
     display: none;
     position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+    top: 0; left: 0; width: 100%; height: 100%;
     background: rgba(0, 0, 0, 0.7);
-    z-index: 999999; /* 层级拉满，凌驾于一切之上 */
-    justify-content: center;
-    align-items: center;
+    z-index: 999999;
+    justify-content: center; align-items: center;
 }
-
-/* 弹窗主体白盒 */
 .gift-result-content {
-    background: #FFF;
-    border-radius: 20px;
-    padding: 35px;
-    width: 85%;
-    max-width: 400px;
-    text-align: center;
+    background: #FFF; border-radius: 20px; padding: 35px; width: 85%; max-width: 400px; text-align: center;
     box-shadow: 0 10px 30px rgba(0,0,0,0.3);
     animation: popupScale 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
+.gift-result-content h2 { color: #C4515C; font-weight: bold; font-size: 28px; margin-bottom: 10px; }
+@keyframes popupScale { from { transform: scale(0.7); opacity: 0; } to { transform: scale(1); opacity: 1; } }
 
-.gift-result-content h2 {
-    color: #C4515C;
-    font-weight: bold;
-    font-size: 28px;
-    margin-bottom: 10px;
+.gift-result-content #result_text {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    color: #4a4a4a !important;
+    text-shadow: none !important;
+    font-size: 18px !important;
+    font-weight: bold !important;
+    line-height: 1.6 !important;
+    margin: 25px 0 !important;
+    padding: 0 10px !important;
 }
 
-@keyframes popupScale {
-    from { transform: scale(0.7); opacity: 0; }
-    to { transform: scale(1); opacity: 1; }
+/* 核心情话文字基础样式 */
+.message p {
+	font-family: 'Signika', sans-serif;
+	font-size: 30px;
+	text-transform: uppercase;
+	color: #C4515C;
+	text-shadow: 2px 2px 2px #FFF;
+	display: none;
+	font-weight: bold;
+}
+
+/* 🐾 附加样式：将召唤小伙伴按钮初始化为隐藏 */
+#summon_friends {
+    display: none;
 }
 
 /* ==========================================================
-   🛠️ 紧急修复：强行召回被全局样式隐藏的盲盒中奖正文文本
+   🌙 阶段性背景柔和变暗核心补丁
+   ========================================================== */
+.dimmed-candles {
+    background-color: #3a2e2b !important; 
+    -webkit-transition: background-color linear 2s !important;
+    -moz-transition: background-color linear 2s !important;
+    -o-transition: background-color linear 2s !important;
+    -ms-transition: background-color linear 2s !important;
+    transition: background-color linear 2s !important;
+}
+
+/* ==========================================================
+   🎁 最终盲盒阶段：完美一屏自然流（适配 A、B、C 盲盒） 🎁
    ========================================================== */
 
-/* 强行覆盖原版 .message p 的隐藏属性，确保弹窗内的字能 100% 显现 */
-.gift-result-content #result_text {
-    display: block !important;          /* 强行转为块级显现，粉碎 display: none */
-    visibility: visible !important;     /* 确保可见性 */
-    opacity: 1 !important;              /* 确保透明度完全正常 */
-    color: #4a4a4a !important;          /* 换成高级、易读的深灰色 */
-    text-shadow: none !important;       /* 去掉原版自带的白色文字阴影，防止瞎眼 */
-    font-size: 18px !important;         /* 精巧的舒适字号 */
-    font-weight: bold !important;       /* 加粗突出特权奖励 */
-    line-height: 1.6 !important;        /* 舒适的行高，让换行更好看 */
-    margin: 25px 0 !important;          /* 给上下按钮和标题留出呼吸间距 */
+/* 1. 🚨 仅在盲盒大容器被正式激活时（.ordered-active），才执行隐形文字段落的空间蒸发，绝不打扰情话播放 */
+.ordered-active-parent p {
+    display: none !important;
+}
+
+/* 2. 💡 让盲盒大容器在开局默认时绝对隐藏[cite: 2]；只有在信件播完被打上 .ordered-active 类名后，才以固定图层在中央现形 */
+#gift_section.ordered-active {
+    position: fixed !important;
+    top: 290px !important;       /* 挂在 200px 排队气球下方，留出完美间距 */
+    left: 50% !important;
+    transform: translateX(-50%) !important; /* 强制水平像素级绝对居中 */
+    width: 100% !important;
+    max-width: 360px !important; /* 限制宽度防止小屏穿帮 */
+    margin-top: 0 !important;
     padding: 0 10px !important;
+    box-sizing: border-box !important;
+    z-index: 999999 !important;
+    display: block !important;   /* 此时强制显形 */
+}
+
+/* 默认状态下（或者初始化开局刷新时），必须老老实实彻底隐藏，防止提早露馅[cite: 2] */
+#gift_section {
+    display: none;
+}
+
+/* 强制覆盖盲盒大标题，优化间距防止把盒子往下挤 */
+#gift_section h3 {
+    font-size: 16px !important;
+    margin-bottom: 12px !important;
+    line-height: 1.4 !important;
+    color: #C4515C !important;
+    font-weight: bold !important;
+    text-shadow: 1px 1px 1px #FFF !important;
+    display: block !important;
+}
+
+/* 3. 确保 A、B、C 三个礼盒脱离原版 flex-wrap 的换行混乱，变成标准的行内块在一行平铺 */
+.gift-container {
+    display: block !important;    
+    text-align: center !important;
+    margin: 0 auto !important;
+}
+
+/* 4. 精调单个盲盒卡片的长宽比例，像九宫格小卡片一样在一屏内完美舒展 */
+.gift-box {
+    display: inline-block !important; 
+    margin: 5px 8px !important;       
+    padding: 10px !important;
+    width: 95px !important;
+    border: 2.5px solid #C4515C !important;
+    background: rgba(255, 255, 255, 0.95) !important;
+    border-radius: 15px !important;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05) !important;
+    vertical-align: top !important;
+}
+
+.gift-icon {
+    font-size: 32px !important;
+}
+.gift-label {
+    font-size: 13px !important;
+    margin-top: 4px !important;
+    font-weight: bold !important;
+    color: #C4515C !important;
+}
+
+/* 5. 究极死锁：一旦进入拆礼物环节，配合 JS 给 body 补上的专属类名，彻底封闭滚动条，实现无滑动一屏 */
+body.ordered-active-body {
+    overflow: hidden !important;
+    height: 100vh !important;
 }
