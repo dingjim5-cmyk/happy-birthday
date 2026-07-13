@@ -280,8 +280,8 @@ var clickCount = 0;
 
 var gifts = {
     1: {
-        title: "✨ 抽出MUSIC专属奖！",
-        text: "【网易云会员】<br><br>妈妈再也不用担心放歌要VIP看广告了！"
+        title: "✨ 抽出直播专属奖！",
+        text: "【网易云会员】<br><br>妈妈再也不用担心放歌要看广告了！"
     },
     2: {
         title: "🍫 抽出巧克力大王专属奖！",
