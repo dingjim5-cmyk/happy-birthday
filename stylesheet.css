@@ -374,7 +374,7 @@ audio { display: none; }
     display: none !important;
 }
 
-/* 2. 💡 让盲盒大容器在开局默认时绝对隐藏[cite: 2]；只有在信件播完被打上 .ordered-active 类名后，才以固定图层在中央现形 */
+/* 2. 💡 让盲盒大容器在开局默认时绝对隐藏；只有在信件播完被打上 .ordered-active 类名后，才以固定图层在中央现形 */
 #gift_section.ordered-active {
     position: fixed !important;
     top: 290px !important;       /* 挂在 200px 排队气球下方，留出完美间距 */
@@ -389,7 +389,7 @@ audio { display: none; }
     display: block !important;   /* 此时强制显形 */
 }
 
-/* 默认状态下（或者初始化开局刷新时），必须老老实实彻底隐藏，防止提早露馅[cite: 2] */
+/* 默认状态下（或者初始化开局刷新时），必须老老实实彻底隐藏，防止提早露馅 */
 #gift_section {
     display: none;
 }
@@ -439,4 +439,79 @@ audio { display: none; }
 body.ordered-active-body {
     overflow: hidden !important;
     height: 100vh !important;
+}
+
+/* ==========================================================
+   🎮 开局搞怪“准备好了吗”彩蛋专属样式
+   ========================================================== */
+#ready_overlay {
+    display: none;                      /* 🛠️ 修正：默认隐藏，由 JS 加载完毕后温和淡入，决不跟 Loading 抢道闪现 */
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    background-color: #000 !important; /* 全黑遮罩，保持神秘感 */
+    z-index: 9999999 !important;       /* 绝对最高图层，盖住一切 */
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    font-family: 'Signika', sans-serif !important;
+}
+
+.ready-title-box {
+    position: absolute !important;
+    top: 25% !important;           /* 💡 用绝对定位直接固定在离顶部 25% 的黄金舒适区，绝对不会再跑偏或蒸发 */
+    left: 50% !important;
+    transform: translateX(-50%) !important; /* 水平像素级绝对居中 */
+    text-align: center !important;
+    width: 100% !important;
+    margin: 0 !important;          /* 彻底清空所有干扰的外边距 */
+}
+#ready_overlay h2 {
+    color: #FFF !important;
+    font-size: 28px !important;
+    font-weight: bold !important;
+    margin-bottom: 10px !important;
+    letter-spacing: 2px !important;
+}
+#ready_overlay h3 {
+    color: #466baf !important; /* 经典蓝色游戏Loading感 */
+    font-size: 18px !important;
+    font-weight: bold !important;
+    margin: 0 !important;
+    letter-spacing: 1px !important;
+}
+
+/* 调皮的小方框按钮 */
+#ready_btn {
+    position: absolute !important; /* 必须绝对定位才能玩瞬移 */
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%) !important;
+    padding: 12px 25px !important;
+    background-color: transparent !important;
+    border: 2px solid #466baf !important;
+    color: #466baf !important;
+    font-size: 16px !important;
+    font-weight: bold !important;
+    border-radius: 8px !important;
+    cursor: pointer !important;
+    white-space: nowrap !important;
+    /* 核心：位移时的动感滑行过渡，让瞬移显得极其丝滑傲娇 */
+    transition: top 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275), 
+                left 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275), 
+                color 0.3s, border-color 0.3s, background-color 0.3s !important;
+}
+
+/* 鼠标悬停或者触碰时的高亮反馈 */
+#ready_btn:active, #ready_btn:hover {
+    background-color: rgba(70, 107, 175, 0.1) !important;
+}
+
+/* 终局按钮的温馨变色样式（好了不闹了） */
+#ready_btn.stop-joking {
+    border-color: #C4515C !important;
+    color: #C4515C !important;
+    animation: popupScale 0.4s ease;
 }
