@@ -1,6 +1,3 @@
-// ==========================================================
-// 🚀 1. 串联初始化流：Loading 彻底加载完后，才淡入引出搞怪彩蛋层
-// ==========================================================
 $(window).load(function(){
 	$('.loading').fadeOut('fast', function(){
         // 当原本的 Loading 走完后，让我们的搞怪彩蛋图层温和地浮现出来
@@ -20,37 +17,37 @@ $('document').ready(function(){
 		});
 
     // ==========================================================
-    // 🎮 2. 开局“准备好了吗”搞怪拉扯计数器与瞬移控制（逻辑卡死版）
+    // 🎮 开局“准备好了吗”搞怪拉扯计数器与瞬移控制
     // ==========================================================
-var clickCount = 0;
+    var clickCount = 0;
     $('#ready_btn').click(function(e){
         clickCount++;
         
         if (clickCount === 1) {
-            // 🚀 第一次闪现：闪现到偏左下方（完美避开上方 25% 的标题，拉开距离）
+            // 第一次闪现：闪现到偏左下方（完美避开上方 25% 的标题，拉开距离）
             $(this).css({
                 'top': '70%',
                 'left': '20%'
             });
         } 
         else if (clickCount === 2) {
-            // 🚀 第二次闪现：闪现到偏右上方（卡在标题右侧的空白黄金区，极度调皮）
+            // 第二次闪现：闪现到偏右上方（卡在标题右侧的空白黄金区，极度调皮）
             $(this).css({
                 'top': '45%',
                 'left': '80%'
             });
         } 
         else if (clickCount === 3) {
-            // 第三次：乖乖回到中轴线偏下，展现温馨红框[cite: 5]
+            // 第三次：乖乖回到中轴线偏下，改头换面展现温馨红框[cite: 5]
             $(this).addClass('stop-joking').html('好了不闹了，让我们开始~').css({
                 'top': '65%',
                 'left': '50%'
             });
         } 
         else if (clickCount === 4) {
-            // 第四次点击：搞怪功成身退！彻底拔除该图层[cite: 5]
+            // 第四次点击：搞怪功成身退！彻底拔除该图层，永不回弹！[cite: 5]
             $('#ready_overlay').fadeOut('slow', function(){
-                $(this).remove(); // 物理卸载[cite: 5]
+                $(this).remove(); // 物理卸载删除该节点[cite: 5]
             });
         }
     });
@@ -178,8 +175,9 @@ var clickCount = 0;
 	});
 
 	$('#summon_friends').click(function(){
+		// 🐾 1. 满足原本仪式感：点击按钮时，猫（嘉年华）和狗（元宝）一左一右正常探头出来[cite: 3, 5]
 		$('#surprise_cat').fadeIn('slow');
-		$('#surprise_dog').delay(400).fadeIn('slow'); 
+		$('#surprise_dog').delay(400).fadeIn('slow');
 
 		$(this).fadeOut('slow').delay(3000).promise().done(function(){
 			$('#light_candle').fadeIn('slow');
@@ -231,6 +229,7 @@ var clickCount = 0;
 		$(this).fadeOut('slow');
 		$('body').removeClass('dimmed-candles'); 
 		
+		// 🚨 2. 进入独白前置处理：把重叠的蛋糕、猫、狗暂时全部淡出隐藏，为情话朗读腾出干净的空间[cite: 3, 5]
 		$('.cake, #surprise_cat, #surprise_dog').fadeOut('fast').promise().done(function(){
 			$('.message').fadeIn('slow');
 		});
@@ -240,6 +239,20 @@ var clickCount = 0;
 			$("p:nth-child("+i+")").fadeOut('slow').delay(800).promise().done(function(){
 			i=i+1;
 			$("p:nth-child("+i+")").fadeIn('slow').delay(1000);
+            
+            // 🐾 ==========================================================
+            // 🐱🐶 3. 完美结合：在独白朗读中，依然支持依次“踩点”重新显示猫和狗
+            // ==========================================================
+            if(i == 11) {
+                // 读到第 11 句「你看，连最傲娇的嘉年华」时，猫咪重现探头[cite: 4]
+                $('#surprise_cat').fadeIn('slow');
+            }
+            else if(i == 12) {
+                // 读到第 12 句「和最贪玩的元宝」时，狗狗也加入重现探头[cite: 4]
+                $('#surprise_dog').fadeIn('slow');
+            }
+            // ==========================================================
+
 			if(i==50){
 				$("p:nth-child(49)").fadeOut('slow').promise().done(function () {
 					var currentVW = $(window).width()/2;
@@ -260,10 +273,10 @@ var clickCount = 0;
 						$('#b6').css({top:180, left: currentVW + 150});
 						$('#b7').css({top:180, currentVW: currentVW + 250});
 					}
-					// 🛠️ 核心优化：盲盒出现阶段，直接让重叠的大蛋糕和猫狗继续处于隐藏状态，彻底释放中下部所有的黄金空间！[cite: 5]
+					// 🛠️ 4. 终结大退场：独白全部结束，再次把猫狗和蛋糕隐藏，彻底平铺盲盒[cite: 5]
 					$('.cake, #surprise_cat, #surprise_dog').hide();
                     
-                    // 🚀 终极联动：同步唤醒类名锁链，让 CSS 接管完美的一屏自然流布局！[cite: 5]
+                    // 同步唤醒类名锁链[cite: 5]
                     $('body').addClass('ordered-active-body');
                     $('.message').addClass('ordered-active-parent');
 					$('#gift_section').addClass('ordered-active').fadeIn('slow');
