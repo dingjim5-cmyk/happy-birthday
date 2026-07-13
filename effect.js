@@ -1,7 +1,14 @@
+// ==========================================================
+// 🚀 1. 串联初始化流：Loading 彻底加载完后，才淡入引出搞怪彩蛋层
+// ==========================================================
 $(window).load(function(){
-	$('.loading').fadeOut('fast');
+	$('.loading').fadeOut('fast', function(){
+        // 当原本的 Loading 走完后，让我们的搞怪彩蛋图层温和地浮现出来
+        $('#ready_overlay').fadeIn('slow');
+    });
 	$('.container').fadeIn('fast');
 });
+
 $('document').ready(function(){
 		var vw;
 		function isMobile() {
@@ -11,6 +18,43 @@ $('document').ready(function(){
 		$(window).resize(function(){
 			vw = $(window).width()/2;
 		});
+
+    // ==========================================================
+    // 🎮 2. 开局“准备好了吗”搞怪拉扯计数器与瞬移控制（逻辑卡死版）
+    // ==========================================================
+var clickCount = 0;
+    $('#ready_btn').click(function(e){
+        clickCount++;
+        
+        if (clickCount === 1) {
+            // 🚀 第一次闪现：闪现到偏左下方（完美避开上方 25% 的标题，拉开距离）
+            $(this).css({
+                'top': '70%',
+                'left': '20%'
+            });
+        } 
+        else if (clickCount === 2) {
+            // 🚀 第二次闪现：闪现到偏右上方（卡在标题右侧的空白黄金区，极度调皮）
+            $(this).css({
+                'top': '45%',
+                'left': '80%'
+            });
+        } 
+        else if (clickCount === 3) {
+            // 第三次：乖乖回到中轴线偏下，展现温馨红框[cite: 5]
+            $(this).addClass('stop-joking').html('好了不闹了，让我们开始~').css({
+                'top': '65%',
+                'left': '50%'
+            });
+        } 
+        else if (clickCount === 4) {
+            // 第四次点击：搞怪功成身退！彻底拔除该图层[cite: 5]
+            $('#ready_overlay').fadeOut('slow', function(){
+                $(this).remove(); // 物理卸载[cite: 5]
+            });
+        }
+    });
+    // ==========================================================
 
 	$('#turn_on').click(function(){
 		$('#bulb_yellow').addClass('bulb-glow-yellow');
@@ -216,10 +260,10 @@ $('document').ready(function(){
 						$('#b6').css({top:180, left: currentVW + 150});
 						$('#b7').css({top:180, currentVW: currentVW + 250});
 					}
-					// 🛠️ 核心优化：盲盒出现阶段，直接让重叠的大蛋糕和猫狗继续处于隐藏状态，彻底释放中下部所有的黄金空间！[cite: 3]
+					// 🛠️ 核心优化：盲盒出现阶段，直接让重叠的大蛋糕和猫狗继续处于隐藏状态，彻底释放中下部所有的黄金空间！[cite: 5]
 					$('.cake, #surprise_cat, #surprise_dog').hide();
                     
-                    // 🚀 终极联动：同步唤醒类名锁链，让 CSS 接管完美的一屏自然流布局！
+                    // 🚀 终极联动：同步唤醒类名锁链，让 CSS 接管完美的一屏自然流布局！[cite: 5]
                     $('body').addClass('ordered-active-body');
                     $('.message').addClass('ordered-active-parent');
 					$('#gift_section').addClass('ordered-active').fadeIn('slow');
